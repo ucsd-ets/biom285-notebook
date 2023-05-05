@@ -18,6 +18,13 @@ RUN apt-get -y install htop
 # 3) install packages using notebook user
 USER jovyan
 
+#RUN R -e "install.packages(c('BiocManager', 'knitr', 'rmarkdown', 'WGCNA', 'ggplot2', 'dplyr'), repos='http://cran.rstudio.com/')" && \
+#    R -e "install.packages('bio3d', repos='http://cran.rstudio.com/')" && \
+#    R -e "BiocManager::install()" && \
+#    R -e "BiocManager::install(c('DESeq2', 'AnnotationDbi', 'pathview', 'gage', 'gageData'))"
+    
+#RUN R -e "update.packages(ask = FALSE, repos = 'http://cran.rstudio.com/')"
+
 # RUN conda install -y scikit-learn
 
 RUN pip install --no-cache-dir networkx scipy
